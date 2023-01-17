@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="reporting.ExtentTestNGITestListenerAdapter" />
+    </listeners>
+    <test  name="Login Page Tests">
+        <classes>
+            <class name="tests.LoginPageTests"/>
+        </classes>
+    </test>
+</suite>
