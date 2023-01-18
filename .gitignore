@@ -14,3 +14,5 @@ ExtentReport.html
 #Build Path
 target/
 /target/
+
+**/*.class

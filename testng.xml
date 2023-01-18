@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="classes" thread-count="5">
+
     <listeners>
         <listener class-name="reporting.ExtentTestNGITestListenerAdapter" />
     </listeners>
-    <test  name="Login Page Tests">
+
+    // Set Of Android Test
+    <test  name="Login Page Tests - iOS">
+        <parameter name="platform" value="ios"/>
         <classes>
             <class name="tests.LoginPageTests"/>
         </classes>
     </test>
+
+    // Set Of Android Test
+    <test  name="Login Page Tests - Android">
+        <parameter name="platform" value="android"/>
+        <classes>
+            <class name="tests.LoginPageTests"/>
+        </classes>
+    </test>
+
 </suite>

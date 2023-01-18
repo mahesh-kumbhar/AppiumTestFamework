@@ -47,6 +47,8 @@ public class ExtentTestNGITestListenerAdapter extends TestListenerAdapter
         // Start video recording
         ((CanRecordScreen) driver).startRecordingScreen();
 
+
+
     }
 
     @Override
