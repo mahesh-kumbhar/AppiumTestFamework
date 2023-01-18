@@ -50,6 +50,7 @@ public class SignInPage extends UserActions
     }
 
     public void openSignInViaEmail() {
+        longWaitForElement(btnSignInViaEmail);
         click(btnSignInViaEmail,"Button 'Sign In Via Email'");
     }
 

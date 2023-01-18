@@ -9,3 +9,8 @@ ExtentReport.html
 *.png
 .idea/
 /.idea/
+
+
+#Build Path
+target/
+/target/

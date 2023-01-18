@@ -1,10 +1,12 @@
 package tests;
 
 import org.testng.annotations.Test;
+import pages.HomePage;
 
 
 public class LoginPageTests extends BaseSettings
 {
+    HomePage homePage;
 
     @Test
     public void login()
@@ -13,7 +15,7 @@ public class LoginPageTests extends BaseSettings
         signInPage.enterUsername("recipeuser@test.com");
         signInPage.enterPassword("123456");
         signInPage.clickSignInButton();
-        signInPage.verifyLoginSuccess();
+       homePage=signInPage.verifyLoginSuccess();
    }
 
    // @Test
