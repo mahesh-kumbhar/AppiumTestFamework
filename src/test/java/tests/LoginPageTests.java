@@ -13,6 +13,7 @@ public class LoginPageTests extends BaseSettings
         signInPage.enterUsername("recipeuser@test.com");
         signInPage.enterPassword("123456");
         signInPage.clickSignInButton();
+        signInPage.verifyLoginSuccess();
    }
 
    // @Test
