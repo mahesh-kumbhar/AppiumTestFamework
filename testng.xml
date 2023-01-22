@@ -5,20 +5,23 @@
         <listener class-name="reporting.ExtentTestNGITestListenerAdapter" />
     </listeners>
 
+
+
     // Set Of Android Test
+   <test  name="Login Page Tests - Android">
+       <parameter name="platform" value="android"/>
+       <classes>
+           <class name="tests.LoginPageTests"/>
+           <class name="tests.CreateAccountTests"/>
+       </classes>
+   </test>
+
+    // Set Of iOS Test
     <test  name="Login Page Tests - iOS">
         <parameter name="platform" value="ios"/>
         <classes>
             <class name="tests.LoginPageTests"/>
+            <class name="tests.CreateAccountTests"/>
         </classes>
     </test>
-
-    // Set Of Android Test
-    <test  name="Login Page Tests - Android">
-        <parameter name="platform" value="android"/>
-        <classes>
-            <class name="tests.LoginPageTests"/>
-        </classes>
-    </test>
-
 </suite>

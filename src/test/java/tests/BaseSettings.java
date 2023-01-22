@@ -20,7 +20,7 @@ public class BaseSettings
     DesiredCapabilities capabilities = new DesiredCapabilities();
 
 
-    @Parameters({"platform"})
+    @Parameters({"platform"}) //-
     @BeforeClass
     public void setUp(String platform) throws IOException {
 

@@ -3,26 +3,16 @@ package tests;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
-
-public class LoginPageTests extends BaseSettings
+public class CreateAccountTests extends BaseSettings
 {
     HomePage homePage;
-
     @Test
-    public void login()
+    public void CreateAccount()
     {
         signInPage.openSignInViaEmail();
         signInPage.enterUsername("recipeuser@test.com");
         signInPage.enterPassword("123456");
         signInPage.clickSignInButton();
-      // homePage=signInPage.verifyLoginSuccess();
-   }
-
-   // @Test
-    public void logout()
-    {
-        //homePage.logout();
+      //  homePage = signInPage.verifyLoginSuccess();
     }
-
-
 }
