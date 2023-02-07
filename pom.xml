@@ -63,4 +63,19 @@
             </plugin>
         </plugins>
    </build>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <platform>android</platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>cloud</id>
+            <properties>
+                <platform>android</platform>
+            </properties>
+        </profile>
+    </profiles>
 </project>
