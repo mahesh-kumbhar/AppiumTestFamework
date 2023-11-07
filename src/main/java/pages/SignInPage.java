@@ -22,24 +22,35 @@ public class SignInPage extends UserActions
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
     }
 
+    //**************************************** Page Elements
     @AndroidFindBy( xpath= "//android.widget.TextView[@text='Sign in with Email']")
     @iOSXCUITFindBy( iOSClassChain= "**/XCUIElementTypeButton[`label == \"Sign in with Email\"`]")
     private WebElement btnSignInViaEmail;
-    @AndroidFindBy(xpath ="(//android.widget.EditText[@content-desc=\"Input\"])[1]")
+    @AndroidFindBy(id ="com.universalstudios.orlandoresort:id/etEmail")
     @iOSXCUITFindBy(iOSNsPredicate ="name == \"Input\" AND type == \"XCUIElementTypeTextField\"")
     private WebElement usernameInput;
 
-    @AndroidFindBy( xpath= "(//android.widget.EditText[@content-desc=\"Input\"])[2]")
+    @AndroidFindBy( id= "com.universalstudios.orlandoresort:id/etPassword")
     @iOSXCUITFindBy( iOSNsPredicate= "name == \"Input\" AND type == \"XCUIElementTypeSecureTextField\"")
     private WebElement passwordInput;
 
-    @AndroidFindBy( xpath= "//android.widget.TextView[@text=\"Sign in\"]")
+    @AndroidFindBy( id= "com.universalstudios.orlandoresort:id/btnSignIn")
     @iOSXCUITFindBy( iOSNsPredicate= "label == \"Sign in\" AND name == \"Button_primary\"")
     private WebElement btnSignIn;
 
-    @AndroidFindBy( xpath= "//android.widget.TextView[@text=\"Sign in\"]")
+    @AndroidFindBy( id= "com.universalstudios.orlandoresort:id/etPassword")
     @iOSXCUITFindBy( xpath= "Home")
     private WebElement tabHome;
+
+    @AndroidFindBy( id= "com.universalstudios.orlandoresort:id/cbRememberMe")
+    @iOSXCUITFindBy( xpath= "XXX")
+    private WebElement chbxRememberMe;
+
+    @AndroidFindBy( xpath= "//*[@text='Do You Have Tickets?']")
+    @iOSXCUITFindBy( iOSClassChain= "XXX")
+    private WebElement hdrDoYouHaveTickets;
+
+    //************************************************ Functions ***********************************************
 
     public void enterUsername(String username) {
         sendKeys(usernameInput,"User Name",username);
@@ -49,22 +60,18 @@ public class SignInPage extends UserActions
         sendKeys(passwordInput,"Password",password);
     }
 
-    public void openSignInViaEmail() {
-        longWaitForElement(btnSignInViaEmail);
-        click(btnSignInViaEmail,"Button 'Sign In Via Email'");
-    }
-
     public void clickSignInButton() {
         click(btnSignIn,"Button 'Sign in'");
     }
 
-    public HomePage verifyLoginSuccess()
+    public OnboardingPage verifyLoginSuccess()
     {
-        waitForElement(tabHome);
-        return new HomePage(driver);
+        waitForElement(hdrDoYouHaveTickets);
+        return new OnboardingPage(driver);
     }
 
-
-
-
+    public void setRememberMeCheckbox()
+    {
+        click(chbxRememberMe,"Checkbox Remember Me");
+    }
 }

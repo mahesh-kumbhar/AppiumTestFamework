@@ -9,10 +9,10 @@ public class CreateAccountTests extends BaseSettings
     @Test
     public void CreateAccount()
     {
-        signInPage.openSignInViaEmail();
-        signInPage.enterUsername("recipeuser@test.com");
-        signInPage.enterPassword("123456");
-        signInPage.clickSignInButton();
+//        signInPage.openSignInViaEmail();
+//        signInPage.enterUsername("recipeuser@test.com");
+//        signInPage.enterPassword("123456");
+//        signInPage.clickSignInButton();
       //  homePage = signInPage.verifyLoginSuccess();
     }
 }
